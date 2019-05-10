@@ -9,4 +9,5 @@ class MinePage(BaseAction):
     login_button = By.XPATH, "//*[@text='登录/注册']"
 
     def click_login(self):
+
         self.click(self.login_button)

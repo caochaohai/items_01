@@ -10,7 +10,11 @@ def init_driver():
     # app信息
     desired_caps['appPackage'] = 'com.tpshop.malls'
     desired_caps['appActivity'] = '.SPMainActivity '
-    desired_caps['noReset'] = True
+    #解决中文问题
+    desired_caps['unicodeKeyboard'] = True
+    desired_caps['resetKeyboard'] = True
+    #不重置应用
+    # desired_caps['noReset'] = True
     desired_caps['automationName'] = 'Uiautomator2'
     return webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 
